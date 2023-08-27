@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import { BrowserRouter,Routes,Route } from "react-router-dom";
+import HomePage from "./Comp/HomePage";
+import ItemPage from "./Comp/Components/ItemPage";
+import ItemPage2 from "./Comp/Components/ItemPage2";
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <BrowserRouter>
+      <Routes>
+        <Route path= '/' element = {<HomePage/>}/>
+        <Route path='/anime/:id' element={<ItemPage/>}/>
+        <Route path='/aniwatch/:id' element={<ItemPage2/>}/>
+      </Routes>
+    </BrowserRouter>
+    </>
   );
 }
 
