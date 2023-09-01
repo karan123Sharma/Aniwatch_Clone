@@ -22,7 +22,9 @@ function Trending() {
         <div className="trending-img">
         {Trending?.map((element)=>{
             return(
+                <Link to={`/aniwatch/${element.id}`} key = {element.id} alt="">
                 <img src={element?.poster} alt="" />
+                </Link>
             )
         })}
         </div>

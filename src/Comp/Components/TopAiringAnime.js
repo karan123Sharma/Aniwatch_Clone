@@ -17,21 +17,19 @@ function TopAiringAnime() {
   let [num,changnum] = useState(0);
   let [num2,changnum2] = useState(1);
   const Change = () =>{
-    console.log("HEY you Clicked me ");
-    changnum(num++) ;
-    changnum2(num2++);
-    if (num2 == 10) {
-      num = 0;
-      num2 = 1;
+    changnum(num-1);
+    changnum2(num2-1);
+    if(num <= 0 ){
+      changnum(0);
+      changnum2(1);
     }
   }
   const Change2 = () =>{
-    console.log("HEY you Clicked me ");
-    changnum(num--) ;
-    changnum2(num2--);
-    if (num2 <= 0 ) {
-      num = 0;
-      num2 = 1;
+    changnum(num + 1) ;
+    changnum2(num2 + 1);
+    if (num2 === 9) {
+      changnum(0);
+      changnum2(1);
     }
   }
 
@@ -60,8 +58,8 @@ function TopAiringAnime() {
               </Link>
             </div>
             <div className="btn-2" >
-             <button onClick={Change2}><i className=" fa fa-backward"></i></button>
-             <button onClick={Change}><i className=" fa fa-forward"></i></button>
+             <button onClick={Change}><i className=" fa fa-backward"></i></button>
+             <button onClick={Change2}><i className=" fa fa-forward"></i></button>
             </div>
           </div>
           <div className="div-img">

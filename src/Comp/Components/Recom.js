@@ -43,7 +43,9 @@ const Recom = () => {
                 return(
                 <>
                 <div className="anime">
+                <Link to={`/aniwatch/${element.id}`} key = {element.id} alt="">
                     <img src={element?.poster} alt="" />
+                </Link>
                     <div>
                         <div className="anime-name">{element.name}</div>
                         <div className="anime-name">{element.otherInfo[0]}</div>
@@ -79,7 +81,9 @@ const Recom = () => {
                 return(
                 <>
                 <div className="anime">
+                <Link to={`/aniwatch/${element.id}`} key = {element.id} alt="">
                     <img src={element?.poster} alt="" />
+                </Link>
                     <div>
                         <div className="anime-name">{element.name}</div>
                         <div className="anime-name">TV</div>

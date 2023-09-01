@@ -4,7 +4,7 @@ import {BrowserRouter, Link, Router} from 'react-router-dom'
 import Footer from './Footer';
 import "/Users/macbookair/Projects/AniWatch_Clone/aniwatch/src/CSS/ItemPage.css";
 
-const ItemPage2 = () => {
+const ItemPage3 = () => {
     // window.location.reload(true)
     const location = useLocation();
     const {id} = useParams();
@@ -55,7 +55,7 @@ const ItemPage2 = () => {
         <div className="trending-img">
         {relatedAnimes?.map((element)=>{
             return(
-                <Link to={`/aniwatch/recomend/${element.id}`} key = {element.id} alt="">
+                <Link to={`/aniwatch/${element.id}`} key = {element.id} alt="">
                     <img src={element?.poster} alt="" />
                 </Link>
             )
@@ -65,7 +65,7 @@ const ItemPage2 = () => {
         <div className="trending-img">
         {recommendedAnimes?.map((element)=>{
             return(
-                <Link to={`/aniwatch/recomend/${element.id}`} key = {element.id} alt="">
+                <Link to={`/aniwatch/${element.id}`} key = {element.id} alt="">
                     <img src={element?.poster} alt="" />
                 </Link>
             )
@@ -84,4 +84,4 @@ const ItemPage2 = () => {
     )
 }
 
-export default ItemPage2
+export default ItemPage3

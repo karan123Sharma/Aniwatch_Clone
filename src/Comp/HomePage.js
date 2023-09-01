@@ -6,6 +6,7 @@ import MoviesPage from "./Components/Movies";
 import Render from "./Components/Render";
 import SearchPage from "./Components/SearchPage";
 import "/Users/macbookair/Projects/AniWatch_Clone/aniwatch/src/CSS/Navbar.css";
+import {Link} from 'react-router-dom'
 
 function HomePage() {
   const [search,setsearch] = useState(false);
@@ -41,16 +42,22 @@ function HomePage() {
      }
   }
  const AllAnime = ()=>{
+    setsearch(false);
+    setdata("");
     setHome(false);
     setmovies(false);
     setAllAnime(true);
   }
  const Movies = ()=>{
+    setsearch(false);
+    setdata("");
     setHome(false);
     setAllAnime(false);
     setmovies(true);
   }
  const HomePage = ()=>{
+    setsearch(false);
+    setdata("");
     setAllAnime(false);
     setmovies(false);
     setHome(true);
@@ -59,7 +66,7 @@ function HomePage() {
     <div className="App">
       <div className="Navbar">
         <ul>
-          <li><img src="https://aniwatch.to/images/logo.png" alt="" /></li>
+          <li><img src="https://aniwatch.to/images/logo.png" onClick={HomePage} style={{cursor:"pointer"}} alt="" /></li>
           <li>
           <form action="" onSubmit={handlesubmit}><input type="text" value={data} onChange={change} className="inputSearch" placeholder="search"/></form></li>
           <li><button class="fa fa-search"></button></li>

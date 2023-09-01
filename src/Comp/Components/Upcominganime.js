@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import "/Users/macbookair/Projects/AniWatch_Clone/aniwatch/src/CSS/upcominganime.css";
 const Upcominganime = () => {
     const [upcomingAnime,SetUpComingAnime] = useState([]);
@@ -21,7 +22,9 @@ const Upcominganime = () => {
             console.log("hey");
             return(
             <div className="images">
-            <img src={element?.poster} alt="" />
+            <Link to={`/aniwatch/${element.id}`} key = {element.id} alt="">
+                    <img src={element?.poster} alt="" />
+                </Link>
                 <div className="details">
                     <h3 className='white'>{element.name.slice(0,35)+"..."}</h3>
                 </div>
