@@ -9,7 +9,7 @@ const Recom = () => {
     const [TopAiring,SetTopAiring] = useState([]);
     const [TopManga,SetTopManga] = useState([]);
     const [MostPopular,SetMostPopular] = useState([]);
-    const [MostFavourite,SetMostFavourite] = useState([]);
+    // const [MostFavourite,SetMostFavourite] = useState([]);
     const FetchTopAiring = async() =>{
         const response = await fetch(`https://api-aniwatch.onrender.com/anime/home`);
             const data = await response.json();

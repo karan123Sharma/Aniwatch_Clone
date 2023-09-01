@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from 'react'
-import { useLocation, useParams } from 'react-router-dom'
-import {BrowserRouter, Link, Router} from 'react-router-dom'
+import { useParams } from 'react-router-dom'
+import { Link} from 'react-router-dom'
 import Footer from './Footer';
 import "/Users/macbookair/Projects/AniWatch_Clone/aniwatch/src/CSS/ItemPage.css";
 
 const ItemPage3 = () => {
     // window.location.reload(true)
-    const location = useLocation();
     const {id} = useParams();
     console.log(id);
     //Content;
     const[animeo,setanime] = useState({});
     const [showmore,setshowmore] = useState(false);
+    // const [count, setCount] = useState(0);
+
     //Destructure the Value
     const {anime,relatedAnimes,recommendedAnimes} = animeo;
     const getAnime = async(id) =>{
@@ -21,7 +22,8 @@ const ItemPage3 = () => {
     }
     useEffect(()=>{
         getAnime(id);
-    },[])
+        // console.log(count);
+    },[id])
   return (
     <>
     <div className='Anime-item'>
@@ -32,7 +34,7 @@ const ItemPage3 = () => {
         <div className="details">
             <div className="grid-view">
                 <div >
-                    <img className="image" src={anime?.info?.poster} alt="" />
+                    <img className="image" src={anime?.info?.poster}  alt="" />
                 </div>
                 <div className="detail">
                     <p><span>Aired: </span><span>{anime?.moreInfo?.status}</span></p> 

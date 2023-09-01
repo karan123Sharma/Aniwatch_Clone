@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import {BrowserRouter, Link, Router} from 'react-router-dom'
-import All_anime from './All_anime';
+import {Link} from 'react-router-dom'
 import "/Users/macbookair/Projects/AniWatch_Clone/aniwatch/src/CSS/ItemPage.css";
 
 const ItemPage = () => {
@@ -11,6 +10,7 @@ const ItemPage = () => {
   const[anime,setanime] = useState({});
   const [characteres,setcharacters] = useState([]);
   const [showmore,setshowmore] = useState(false);
+//   const [count, setCount] = useState(0);
 
   //Destructure the Value
   const {title,synopsis,
@@ -32,7 +32,8 @@ const ItemPage = () => {
   useEffect(()=>{
       getAnime(id);
       getCharacters(id);
-  },[])
+    //   console.log(count);
+  },[id])
 return (
   <>
   <div className='Anime-item'>

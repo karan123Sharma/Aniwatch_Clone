@@ -1,6 +1,6 @@
 import React from 'react'
-import Footer from "./Footer";
-import MoviesPage from './Movies';
+// import Footer from "./Footer";
+// import MoviesPage from './Movies';
 import Recom from "./Recom";
 import TopAiringAnime from "./TopAiringAnime";
 import Trending from "./Trending";

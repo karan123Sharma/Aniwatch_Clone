@@ -5,10 +5,10 @@ const Footer = () => {
   return (
     <div className='Footer'>
         <div className="Socials margin">
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-twitter"></a>
-        <a href="#" class="fa fa-youtube"></a>
-        <a href="#" class="fa fa-instagram"></a>
+        <a href="https://www.facebook.com/" class="fa fa-facebook"> </a>
+        <a href="https://twitter.com/login?lang=en" class="fa fa-twitter"> </a>
+        <a href="https://www.youtube.com/" class="fa fa-youtube"> </a>
+        <a href="https://www.instagram.com/" class="fa fa-instagram"> </a>
         </div>
         <h3 className='white margin'>Contact Us</h3>
         <h3 className='white margin'>Our Service</h3>

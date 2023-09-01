@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 import "/Users/macbookair/Projects/AniWatch_Clone/aniwatch/src/CSS/TopAiring.css";
 function TopAiringAnime() {
   const [TopAiring,SetTopAiring] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  // const [isLoading, setIsLoading] = useState(true);
   const getTopAiring = async() =>{
     const response = await fetch(`https://api-aniwatch.onrender.com/anime/home`);
     const data = await response.json();

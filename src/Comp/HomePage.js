@@ -6,7 +6,7 @@ import MoviesPage from "./Components/Movies";
 import Render from "./Components/Render";
 import SearchPage from "./Components/SearchPage";
 import "/Users/macbookair/Projects/AniWatch_Clone/aniwatch/src/CSS/Navbar.css";
-import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 
 function HomePage() {
   const [search,setsearch] = useState(false);
@@ -37,8 +37,11 @@ function HomePage() {
         else if(Home){
            return(<Render/>);
         }
+        break;
       case true:
         return(<SearchPage name={data}/>);
+      default:
+        break;  
      }
   }
  const AllAnime = ()=>{
